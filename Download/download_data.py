@@ -68,6 +68,6 @@ if __name__ == "__main__":
     parser.add_argument('-c', '--class_', type=str, 
                        choices=['preictal','interictal'], 
                        help='Choose the class i.e. preictal or interictal',
-                       default="preictal")
+                       default="interictal")
     args = parser.parse_args()
     begin_downloads(args.class_)
