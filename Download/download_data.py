@@ -59,6 +59,8 @@ def begin_downloads(type_: Literal["preictal","interictal"]):
             download_file(complete_link, f"{type_}/{f_name}", desc=f"📥 {f_name}")
 
         except Exception as e:
+            with open(f"failed_{type_}.txt", 'a') as file:
+                file.write(f_name+"\n") 
             print(f"Error downloading {f_name}: {e}")
 
 if __name__ == "__main__":
